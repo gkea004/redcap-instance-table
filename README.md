@@ -18,7 +18,8 @@ If project is longitudinal, use `@INSTANCETABLE=event_name:form_name` to specify
 * `@INSTANCETABLE_REF=fieldname`: Where you have an instance table on a repeating form - i.e. is referencing another repeating form - you can have the instances filtered to show only those where the current instance number is saved in a field on the other form.<br>For example, an instance table in a repeating "Visit" form may be configured to show only instances of the repeating "Medication" form where the current Visit instance is selected in the `visitref` field on the Medication form: `@INSTANCETABLE @INSTANCETABLE_REF=visitref`.<br>Note that if you use `@INSTANCETABLE_REF` for an instance table on a non-repeating form the filter will default to `<ref field>=1`.<br>New instances created by clicking the "Add New" button below the instance table will have the current visit instance pre-selected.
 
 ### Tags Used for Fields on a Repeating Form 
-* `@INSTANCETABLE_HIDE`: Ignore this field in instance tables.
+* `@INSTANCETABLE_HIDE`: Ignore this field, do not display in instance tables.
+* `@INSTANCETABLE_SHOW`: If this tag is used, only those fields with the tag will be shown in instance tables. 
 * `@INSTANCETABLE_LABEL='column header'`: Provide an alternative column title for the field in instance tables.
 
 ## Example 
